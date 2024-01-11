@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.mygdx.game.mobs.Rat;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -17,9 +18,11 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {
+		Rat krysa = new Rat();
 		ScreenUtils.clear(1, 0, 0, 1);
 		batch.begin();
-		batch.draw(img, 0, 0);
+		batch.draw(krysa.img, 0, 0, 200, 200);
+		batch.draw(krysa.img, 100, 100,200,200);
 		batch.end();
 	}
 	
