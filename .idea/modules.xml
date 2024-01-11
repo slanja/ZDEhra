@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ZDEhra.iml" filepath="$PROJECT_DIR$/.idea/modules/ZDEhra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.main.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.test.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/ZDEhra.desktop.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.iml" filepath="$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.main.iml" filepath="$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.test.iml" filepath="$PROJECT_DIR$/.idea/modules/html/ZDEhra.html.test.iml" />
+    </modules>
+  </component>
+</project>
