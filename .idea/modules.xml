@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ZDEhra.iml" filepath="$PROJECT_DIR$/.idea/modules/ZDEhra.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.main.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.unitTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/ZDEhra.core.test.iml" />
