@@ -1,9 +1,12 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.mygdx.game.UI.BaseAttackButton;
 import com.mygdx.game.mobs.Rat;
 
 public class MyGdxGame extends ApplicationAdapter {
@@ -27,6 +30,12 @@ public class MyGdxGame extends ApplicationAdapter {
 		batch.draw(krysa.img, (float) (widthScreen/2), (float) (heightScreen/2), 200, 200);
 		batch.draw(krysa.img, 100, 100,200,200);
 		batch.end();
+
+		BaseAttackButton attackButton = new BaseAttackButton(new Texture(Gdx.files.internal("rat.png")),600,500);
+		Gdx.gl.glClearColor(1,1,1,1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		stage.
+
 	}
 	
 	@Override
