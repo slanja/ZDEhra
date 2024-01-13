@@ -1,40 +1,47 @@
 package com.mygdx.game.characters;
 
 import com.badlogic.gdx.utils.compression.lzma.Base;
+import com.mygdx.game.mobs.BaseMob;
+import com.mygdx.game.mobs.Rat;
 
 public class BaseChar {
-        private int health;
-        private int attack;
-        private int dodge;
+        private int charHealth;
+        private int charAttack;
+        private int charDodge;
 
-        public BaseChar(int health, int attack, int dodge)
+        public BaseChar(int charHealth, int charAttack, int charDodge)
         {
-                this.health = health;
-                this.attack = attack;
-                this.dodge = dodge;
+                this.charHealth = charHealth;
+                this.charAttack = charAttack;
+                this.charDodge = charDodge;
         }
 
-        public int getHealth() {
-                return health;
+        public int getCharHealth() {
+                return charHealth;
         }
 
-        public int getDodge() {
-                return dodge;
+        public int getCharDodge() {
+                return charDodge;
         }
 
-        public int getAttack() {
-                return attack;
+        public int getCharAttack() {
+                return charAttack;
         }
 
-        public void setHealth(int health) {
-                this.health = health;
+        public void setCharHealth(int charHealth) {
+                this.charHealth = charHealth;
         }
 
-        public void setDodge(int dodge) {
-                this.dodge = dodge;
+        public void setCharDodge(int charDodge) {
+                this.charDodge = charDodge;
         }
 
-        public void setAttack(int attack) {
-                this.attack = attack;
+        public void setCharAttack(int charAttack) {
+                this.charAttack = charAttack;
+        }
+
+        public void doAttack(BaseChar character, BaseMob mob)
+        {
+                mob.setMobHealth(mob.getMobHealth() - character.getCharAttack());
         }
 }

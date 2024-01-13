@@ -1,5 +1,7 @@
 package com.mygdx.game.characters;
 
+import com.mygdx.game.mobs.Rat;
+
 public class Warrior extends BaseChar{
     public Warrior()
     {
