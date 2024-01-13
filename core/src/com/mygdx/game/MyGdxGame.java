@@ -33,12 +33,12 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {	//POZOR RENDER DÁ NAVRH TO CO JE NÍŽ TAKŽE STAGE DÁM AŽ ZA POZADÍ
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);	//pozadí ?
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);	//idk co to je prý to má existovat na začátku renderu
+		ScreenUtils.clear(0.5F, 0.5F, 0, 1);	//pozadí
+
 		stage.draw();			//vyrenderuje stage a neměl bych muset renderovat každý objekt zvlášť protože objekty jsou actoři ve stage
 
 		/*batch = new SpriteBatch();
-		Rat krysa = new Rat();
-		ScreenUtils.clear(0.5F, 0.5F, 0, 1);
 		batch.begin();
 		batch.draw(krysa.img, (float) (widthScreen/2), (float) (heightScreen/2), 200, 200);
 		batch.draw(krysa.img, 100, 100,200,200);

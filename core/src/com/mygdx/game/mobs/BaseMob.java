@@ -3,6 +3,7 @@ package com.mygdx.game.mobs;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.mygdx.game.characters.BaseChar;
 import com.mygdx.game.characters.Warrior;
@@ -16,7 +17,7 @@ public class BaseMob extends Actor {    //actor je jakýkoliv prvek na stage (jd
 
     @Override
     public void draw(Batch batch, float parentAlpha) {      //tohle je na vykreslení    (btw jestli chci zabudovaný funkce rodičovský classy dám CTRL + O)
-        batch.draw(img,0,0, 100, 100);            //vykreslí img který definujeme v podclasse jako je rat.java a jeho pozici definuji zatím 0 0 ale potom bychom přidali proměnné
+        batch.draw(img,0,0, 100, 100);   //vykreslí img který definujeme v podclasse jako je rat.java a jeho pozici definuji zatím 0 0 ale potom bychom přidali proměnné
     }
 
     public BaseMob(int mobHealth, int mobAttack, int mobDodge)
