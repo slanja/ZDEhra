@@ -30,8 +30,9 @@ public class MyGdxGame extends ApplicationAdapter {
 													//screen viewport by mělo automaticky brát rozlišení obrazovky a na základě toho vytvořit stage v tom rozlišení
 		Gdx.input.setInputProcessor(stage);		//render něčeho nemůže pobírat inputy jako klikání myší etc. ale stage to umí takže předávám Gdx prvkům input který snímá stage
 		Rat krysa = new Rat();			//vytvoří actora
-		AttackButton1 attackButton1 = new AttackButton1();
 		Warrior helda = new Warrior();
+		AttackButton1 attackButton1 = new AttackButton1(helda,krysa);
+		attackButton1.keyDown(1);
 		stage.addActor(krysa);			//přídá actora krysa do stage
 		stage.addActor(attackButton1);
 		stage.addActor(helda);
@@ -42,6 +43,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);	//idk co to je prý to má existovat na začátku renderu
 		ScreenUtils.clear(0.5F, 0.5F, 0, 1);	//pozadí
 
+		stage.act();
 		stage.draw();			//vyrenderuje stage a neměl bych muset renderovat každý objekt zvlášť protože objekty jsou actoři ve stage
 
 		/*batch = new SpriteBatch();

@@ -70,4 +70,5 @@ public class BaseAttackButton extends Actor {
     public void setButton(ImageButton button) {
         this.button = button;
     }
+
 }
