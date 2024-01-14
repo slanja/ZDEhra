@@ -1,5 +1,7 @@
 package com.mygdx.game.UI;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.graphics.Texture;
 import com.mygdx.game.characters.Warrior;
@@ -15,10 +17,14 @@ public class AttackButton1 extends BaseAttackButton implements InputProcessor {
     }
 
 
-    @Override
+    @Override //On button press SPACE, doAttack char to enemy = minus health
     public boolean keyDown(int X) {
-        onAttack.doAttack(onAttack, rat);
-        rat.setMobTexture(new Texture("warrior.png"));
+        if(X == Input.Keys.SPACE)
+        {
+            onAttack.doAttack(onAttack, rat);
+            System.out.println(rat.getMobHealth());
+            rat.setMobTexture(new Texture("warrior.png"));
+        }
         return false;
     }
 
