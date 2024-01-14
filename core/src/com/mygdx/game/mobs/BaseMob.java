@@ -13,18 +13,19 @@ public class BaseMob extends Actor {    //actor je jakýkoliv prvek na stage (jd
     private int mobAttack;
     private int mobDodge;
 
-    public Texture img;
+    private Texture mobTexture;
 
     @Override
     public void draw(Batch batch, float parentAlpha) {      //tohle je na vykreslení    (btw jestli chci zabudovaný funkce rodičovský classy dám CTRL + O)
-        batch.draw(img,0,0, 100, 100);   //vykreslí img který definujeme v podclasse jako je rat.java a jeho pozici definuji zatím 0 0 ale potom bychom přidali proměnné
+        batch.draw(mobTexture,0,0, 100, 100);   //vykreslí img který definujeme v podclasse jako je rat.java a jeho pozici definuji zatím 0 0 ale potom bychom přidali proměnné
     }
 
-    public BaseMob(int mobHealth, int mobAttack, int mobDodge)
+    public BaseMob(int mobHealth, int mobAttack, int mobDodge, Texture mobTexture)
     {
         this.mobHealth = mobHealth;
         this.mobAttack = mobAttack;
         this.mobDodge = mobDodge;
+        this.mobTexture = mobTexture;
     }
 
     public int getMobHealth() {
@@ -39,6 +40,10 @@ public class BaseMob extends Actor {    //actor je jakýkoliv prvek na stage (jd
         return mobAttack;
     }
 
+    public Texture getMobTexture() {
+        return mobTexture;
+    }
+
     public void setMobHealth(int mobHealth) {
         this.mobHealth = mobHealth;
     }
@@ -49,6 +54,10 @@ public class BaseMob extends Actor {    //actor je jakýkoliv prvek na stage (jd
 
     public void setMobAttack(int mobAttack) {
         this.mobAttack = mobAttack;
+    }
+
+    public void setMobTexture(Texture mobTexture) {
+        this.mobTexture = mobTexture;
     }
 
     public void doAttack(BaseChar character, BaseMob mob)
