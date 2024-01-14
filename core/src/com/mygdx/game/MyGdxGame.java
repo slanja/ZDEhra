@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
+import com.mygdx.game.UI.AttackButton1;
 import com.mygdx.game.UI.BaseAttackButton;
 import com.mygdx.game.mobs.Rat;
 
@@ -28,7 +29,9 @@ public class MyGdxGame extends ApplicationAdapter {
 													//screen viewport by mělo automaticky brát rozlišení obrazovky a na základě toho vytvořit stage v tom rozlišení
 		Gdx.input.setInputProcessor(stage);		//render něčeho nemůže pobírat inputy jako klikání myší etc. ale stage to umí takže předávám Gdx prvkům input který snímá stage
 		Rat krysa = new Rat();			//vytvoří actora
+		AttackButton1 attackButton1 = new AttackButton1();
 		stage.addActor(krysa);			//přídá actora krysa do stage
+		stage.addActor(attackButton1);
 	}
 
 	@Override
