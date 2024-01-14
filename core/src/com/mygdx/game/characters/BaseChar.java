@@ -1,11 +1,13 @@
 package com.mygdx.game.characters;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.mygdx.game.mobs.BaseMob;
 import com.mygdx.game.mobs.Rat;
 
-public class BaseChar {
+public class BaseChar extends Actor {
         private int charHealth;
         private int charAttack;
         private int charDodge;
@@ -54,5 +56,10 @@ public class BaseChar {
         public void doAttack(BaseChar character, BaseMob mob)
         {
                 mob.setMobHealth(mob.getMobHealth() - character.getCharAttack());
+        }
+
+        @Override
+        public void draw(Batch batch, float parentAlpha) {
+                batch.draw(charTexture,50,250,100,100);
         }
 }
