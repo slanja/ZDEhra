@@ -11,7 +11,7 @@ public class DesktopLauncher {
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 		config.setForegroundFPS(60);
 		config.setTitle("ZDEhra");
-		config.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
+		// config.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
 		new Lwjgl3Application(new MyGdxGame(Lwjgl3ApplicationConfiguration.getDisplayMode().width,
 				Lwjgl3ApplicationConfiguration.getDisplayMode().height),
 				config);
