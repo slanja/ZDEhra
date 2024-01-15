@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.8">
       <module name="Documents.ZDEhra.android" target="21" />
-      <module name="ZDEhra.android" target="19" />
+      <module name="ZDEhra.android" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/Documents.ZDEhra.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/Documents.ZDEhra.android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ZDEhra.iml" filepath="$PROJECT_DIR$/.idea/modules/ZDEhra.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/android/ZDEhra.android.androidTest.iml" />
