@@ -2,9 +2,12 @@ package com.mygdx.game;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -14,25 +17,25 @@ import com.mygdx.game.characters.Warrior;
 import com.mygdx.game.mobs.Rat;
 
 public class MyGdxGame extends ApplicationAdapter {
-	SpriteBatch batch;
 	double widthScreen;
 	double heightScreen;
+	Stage stage;
 
 	public  MyGdxGame(double width, double height) {
 		super();
 		this.widthScreen = width;
 		this.heightScreen = height;
 	}
-	Stage stage;
+
 	@Override
 	public void create() {	//ještě před renderem bychom měli některý věci vytvořit, aby se nevytvářeli během renderu říkal někdo
 		stage = new Stage(new ScreenViewport());	//použivám stage, stage je jakoby část hry kterou jen měníš ale v základu je stejná, naše hlavní stage teda je hra ale bude i vedlejší stage třeba jako loading screen (jestli to nejde pochopit vysvětlím
 													//screen viewport by mělo automaticky brát rozlišení obrazovky a na základě toho vytvořit stage v tom rozlišení
-		Gdx.input.setInputProcessor(stage);		//render něčeho nemůže pobírat inputy jako klikání myší etc. ale stage to umí takže předávám Gdx prvkům input který snímá stage
+				//render něčeho nemůže pobírat inputy jako klikání myší etc. ale stage to umí takže předávám Gdx prvkům input který snímá stage
 		Rat krysa = new Rat();			//vytvoří actora
 		Warrior helda = new Warrior();
 		AttackButton1 attackButton1 = new AttackButton1(helda,krysa);
-		attackButton1.keyDown(1);
+		Gdx.input.setInputProcessor(attackButton1); //input is set to attackButton1, because InputProcessor is in attackButton1 class
 		stage.addActor(krysa);			//přídá actora krysa do stage
 		stage.addActor(attackButton1);
 		stage.addActor(helda);
@@ -43,7 +46,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);	//idk co to je prý to má existovat na začátku renderu
 		ScreenUtils.clear(0.5F, 0.5F, 0, 1);	//pozadí
 
-		stage.act();
+		stage.act(Gdx.graphics.getDeltaTime());
 		stage.draw();			//vyrenderuje stage a neměl bych muset renderovat každý objekt zvlášť protože objekty jsou actoři ve stage
 
 		/*batch = new SpriteBatch();
@@ -60,6 +63,6 @@ public class MyGdxGame extends ApplicationAdapter {
 	
 	@Override
 	public void dispose () {
-		// batch.dispose();
+		stage.dispose();
 	}
 }
